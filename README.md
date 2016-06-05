@@ -1,2 +1,2 @@
 # blog
-學習東西的記錄
+Record what I learned every day!
