@@ -1,5 +1,6 @@
 ## Inheritance (繼承)
 
+> [混合繼承(Mixin)](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/) 
 
 ## Polymorphism(多型)
 
