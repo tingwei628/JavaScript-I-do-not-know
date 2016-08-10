@@ -2,9 +2,11 @@
 
 ```
   簡單的說，介於中間，處理細節的部分。部分function 會經過middleware 本身。(其他程式語言也有應用的例子)
+  
+  以Node.js 來說，在處理不同request時候，到route 的之前，會先有些處理，此時function 我稱之為Middleware
 ```
 
-### 起手式
+### 如何寫一個Middleware?
 
 以Node.js 為例
 
@@ -21,10 +23,14 @@
 例如:
 
 ```js
+var crossDomainMiddleware = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*'); // 所有response 都會加上該header
+  next();
+}
 
 ```
 
-### 如何使用middleware?
+### 如何使用Middleware?
 
 以Express.js 為例(Node.js 框架)
 
@@ -39,3 +45,7 @@ app.get('/', function(req, res, err) {
 })
 
 ```
+
+### 其它
+
++ [app.use 和 middlware 的關係](http://stackoverflow.com/questions/7337572/what-does-middleware-and-app-use-actually-mean-in-expressjs)
