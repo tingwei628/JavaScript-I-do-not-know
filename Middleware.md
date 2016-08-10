@@ -46,6 +46,17 @@ app.get('/', function(req, res, err) {
 
 ```
 
+### 注意事項
+
++ 只對/yourpathname 的路徑，才會使用yourMiddlware
+
+```js
+
+app.use('/yourpathname', yourMiddlware);
+
+```
+
+
 ### 其它
 
 + [app.use 和 middleware 的關係](http://stackoverflow.com/questions/7337572/what-does-middleware-and-app-use-actually-mean-in-expressjs)
