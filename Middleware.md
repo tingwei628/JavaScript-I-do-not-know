@@ -48,4 +48,4 @@ app.get('/', function(req, res, err) {
 
 ### 其它
 
-+ [app.use 和 middlware 的關係](http://stackoverflow.com/questions/7337572/what-does-middleware-and-app-use-actually-mean-in-expressjs)
++ [app.use 和 middleware 的關係](http://stackoverflow.com/questions/7337572/what-does-middleware-and-app-use-actually-mean-in-expressjs)
