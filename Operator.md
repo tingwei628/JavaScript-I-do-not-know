@@ -1,5 +1,5 @@
 ### 將String 轉成 Number
-```
+```js
  var str = '5';
  +str // 5 (這時是Number) 
 ```
