@@ -29,4 +29,4 @@ num + '' // '5' (這時是String)
 ```
 
 
-#### 參考: https://www.sitepoint.com/javascript-double-negation-trick-trouble/
+#### [參考資料](https://www.sitepoint.com/javascript-double-negation-trick-trouble/)
