@@ -28,5 +28,33 @@ num + '' // '5' (這時是String)
 
 ```
 
+### 預設值
+```js
+  function(passInValue) {
+    var value = passInValue || defaultValue;
+  }
+  // passInValue 傳進來的值
+  // defaultValue 預設值
+  
+  // 但是 遇到 falsy value 就會出錯
+  // 例如 當 passInValue = 0 或是 passInValue = "" 之類的falsy value
+  var value = 0 || defaultValue; // value = defaultValue
+  var value = "" || defaultValue; // value = defaultValue
+  
+  // 所以 不要用Falsy, 改成
+  function(passInValue) {
+    if (passInValue === undefined) {
+      value = defaultValue;
+    }
+  }
+  
+  // 或是 用ES6 寫法
+  function(value = defaultValue) {
+  
+  }
+  
+```
 
-#### [參考資料](https://www.sitepoint.com/javascript-double-negation-trick-trouble/)
+## 參考資料
+1. [!!作用](https://www.sitepoint.com/javascript-double-negation-trick-trouble/)
+2. [預設值](http://www.codereadability.com/javascript-default-parameters-with-or-operator/)
