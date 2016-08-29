@@ -1,4 +1,4 @@
-## 基本 物件綁定function用法
+## 物件綁定function用法
 
 ```js
   var f = function() {
