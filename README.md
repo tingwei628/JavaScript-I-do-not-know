@@ -6,3 +6,4 @@
  + [Object-Oriented](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Object-Oriented.md)
  + [Operator](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Operator.md)
  + [Basics](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Basics.md)
+ + [Design-Pattern](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/DesignPattern)
