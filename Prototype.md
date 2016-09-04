@@ -1,12 +1,22 @@
 ```js
 
-__proto__
+__proto__: 實作的object 可以透過__proto__, 確認該上層function的prototype的屬性或方法
 
-prototype是函数😎独有的属性😎.当我们使用关键词new并且将函数作为构造函数来构造对象的时候, 它被用来构建对象的__proto__属性.
+prototype: function 的屬性(default), 可以隨意設定屬性或方法
+
+//
+function A() {
+  // constructor
+}
+var h = new A() // create a object
+h.constructor // function A() {}
+h.constructor === h.__proto__.constructor // true
 
 
 (new A()).__proto__ === A.prototype // true,
 
+
+// Example
 function a () {};
 var t = new a();
 t.__proto__ === a.prototype // true
@@ -78,3 +88,7 @@ function Factory() {
  return o;
 }
 ```
+
+
+##參考資料
+[OOP in JavaScript](http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/)
