@@ -87,6 +87,33 @@ function Factory() {
  o.sayName = function () { console.log(this.name);}
  return o;
 }
+
+// OOP 三大重點, Inheritance, Polymorphism, Encapsulation
+
+// Inheritance  繼承物件
+function createObject(o) { // o is {...}
+  function F() {}
+  F.prototype = o;
+  return new F(); 
+  // return F-based object 
+}
+
+// another example: child object inherites parent object
+// 首先 copy parent prototype
+var copyParentPrototype = createObject(parent.prototype);
+child.constructor = child;
+child.prototype = copyParentPrototype;
+
+// initial constructor same as F
+function B(prop) {
+  F.call(this, prop);
+}
+
+
+
+// Polymorphism  可以透過不同Interface 實作
+// Encapsulation 物件的屬性和方法封裝
+
 ```
 
 
