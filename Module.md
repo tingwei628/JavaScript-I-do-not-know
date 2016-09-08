@@ -13,6 +13,23 @@ module.exports.hello = function() { // in app.js
 var func = require('./app.js'); // require 是 module.exports 而不是 exports
 func.hello() // hello
 
+// 注意 不要寫成這樣, 如此一來 exports 指向不是module.exports
+exports = function() {
+  console.log('hello'); 
+}
+
+// 除非這樣改寫
+module.exports = function() {
+  console.log('hello');
+}
+exports = module.exports; // 確保exports
+
+
+// 也可以這樣寫
+exports = module.exports = function() {
+  console.log('hello');
+}
+
 ```
 
 
