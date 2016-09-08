@@ -34,7 +34,7 @@ exports = module.exports = function() {
 
 ## 各種module 引入方式
 
-1. export 命名空間
++ export 命名空間
 ```js
   // 先將命名空間 指向exports
   var yourNameSpace = exports; // in app.js
@@ -42,7 +42,7 @@ exports = module.exports = function() {
   var x = require('app.js'); // import your whole namespace
   
 ```
-2. export 高階函數(High Order function) 方式
++ export 高階函數(High Order function) 方式
 ```js 
 // 簡單來說, export function 裏面還有function
 module.exports = function outerFunc() {  // in app.js
@@ -56,7 +56,7 @@ var inner = q(); // 回傳 innerFunc
 inner(); // 執行innerFunc
 ```
 
-3. export 建構子(Constructor)
++ export 建構子(Constructor)
 ```js
   function Person() { // in app.js
     this.name = name;
