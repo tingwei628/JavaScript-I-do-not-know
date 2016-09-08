@@ -41,7 +41,33 @@ exports = module.exports = function() {
   
   var x = require('app.js'); // import your whole namespace
   
+```
+2. export 高階函數(High Order function) 方式
+```js 
+// 簡單來說, export function 裏面還有function
+module.exports = function outerFunc() {  // in app.js
+  return function innerFunc() {
+    //...
+  }
+}
 
+var q = require('app.js');
+var inner = q(); // 回傳 innerFunc
+inner(); // 執行innerFunc
+```
+
+3. export 建構子(Constructor)
+```js
+  function Person() { // in app.js
+    this.name = name;
+  }
+  Person.prototype.getName = function() {
+    return this.name;
+  }
+  module.exports = Person;
+  
+  var P = require('app.js');
+  var person = new P() // 實作 Person
 ```
 
 
