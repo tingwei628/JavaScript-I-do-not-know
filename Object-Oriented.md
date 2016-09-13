@@ -8,6 +8,44 @@
 
 ## Encapsulation (封裝)
 
+Public
+```js
+function T() {
+  this.func = function() { ... }
+}
+var a = new T();
+a.func() // func is a public method
+```
+
+Private
+```js
+ function T() {
+  var s = 'abc';
+  function read() {
+    console.log(s);
+  }
+ }
+ var a = new T();
+ a.s // undefined... s is private
+ a.read(); // error... read is a private method
+```
+
+Privileged (透過public method 呼叫 封裝的private method)
+```js
+ function T() {
+   function privateFunc() {
+     return 'one';
+   }
+   this.service = function () {
+     return privateFunc();
+   }
+ }
+ var a = new T();
+ a.service(); // one, service is a public method and call its private method
+ a.privateFunc() // error...  private is a private method
+
+```
+
 
 ---
 
