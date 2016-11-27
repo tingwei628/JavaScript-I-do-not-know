@@ -10,3 +10,4 @@
  + [Prototype](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Prototype.md)
  + [Module](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Module.md)
  + [Closure](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Closure.md)
+ + [Generator](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Generator.md)
