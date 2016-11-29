@@ -11,3 +11,6 @@
  + [Module](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Module.md)
  + [Closure](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Closure.md)
  + [Generator](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Generator.md)
+ 
+### JS Questions
+ + [5-typical-javascript-interview-exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
