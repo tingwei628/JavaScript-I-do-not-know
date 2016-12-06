@@ -3,13 +3,15 @@ __proto__: 實作的object 可以透過__proto__, 確認該上層function的prot
 
 prototype: function 的屬性(default), 可以隨意設定屬性或方法
 
-// Example
+Example
+```js
 function a () {};
 var t = new a();
 t.__proto__ === a.prototype // true
 a.prototype.__proto__ === Object.prototype // true
 a.prototype.__proto__.__proto__ // null
 Object.prototype.__proto__ // null 物件的原型null
+```
 
 
 ## Inheritance (繼承)
