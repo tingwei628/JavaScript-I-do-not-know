@@ -2,7 +2,7 @@
 
 ## Generator
 
-### Introduce [Symbol.Iterator] first
+### Introduce [Symbol.iterator] first
 
 * Demo how to iterate functions and execute them in order!
 ```js
