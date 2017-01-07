@@ -11,5 +11,7 @@
  + [Closure](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Closure.md)
  + [Generator](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Generator.md)
  
+### JS Clean Code Guide
+ + [clean code](https://github.com/ryanmcdermott/clean-code-javascript)
 ### JS Questions
  + [5-typical-javascript-interview-exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
