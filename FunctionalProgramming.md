@@ -15,12 +15,6 @@
   f is function; a is a wrapped value
 ```
 
-###Examples
-
-```js
-```
-
-
 ##Reference
 [Explantion of functional programming](https://zhuanlan.zhihu.com/p/20824527)
 
