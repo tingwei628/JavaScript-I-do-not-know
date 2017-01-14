@@ -10,6 +10,7 @@
  + [Module](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Module.md)
  + [Closure](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Closure.md)
  + [Generator](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Generator.md)
+ + [Function Programming](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/FunctionalProgramming.md)
  
 ### JS Clean Code Guide
  + [clean code](https://github.com/ryanmcdermott/clean-code-javascript)
