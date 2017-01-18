@@ -28,3 +28,4 @@ var re = /abc/i
 Reference
 
 - [Regexp theory](https://aotu.io/notes/2016/11/17/regexp-theory/)
+- [Regexp practice](https://aotu.io/notes/2016/12/07/regexp-practice/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
