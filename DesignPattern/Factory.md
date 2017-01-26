@@ -1,7 +1,31 @@
 ##工廠模式
 
 ```js
+/*
+  規則:
+  X = totalHrs
+  hrs = [0, 2, 3, 6, 8]
 
+  區間      類型     區間長度
+  0 ~ 2 => 'A'     (2 - 0 = 2)
+  2 ~ 3 => 'B'     (3 - 2 = 1)
+  3 ~ 6 => 'C'     (6 - 3 = 3)
+  6 ~ 8 => 'D'     (8 - 6 = 2)
+  8~    => 'E'     (X - 8)
+  
+  範例
+  X = 7
+  7 落在 [0, 2, 3, 6, 8]  其中 6和8的區間
+  // output  
+  // otT 是 factory類型
+  // hrs 是 區間長度
+  // inTs 是 類型
+  [ { otT: 0, hrs: 2, inTs: 'A' },
+  { otT: 0, hrs: 1, inTs: 'B' },
+  { otT: 0, hrs: 3, inTs: 'C' },
+  { otT: 0, hrs: 1, inTs: 'D' },
+  { otT: 0, hrs: undefined, inTs: undefined } ]
+*/
 var factory = (() => {
   function OtT(t, totalHrs, hrs, inT) {
     this.otT = t;
