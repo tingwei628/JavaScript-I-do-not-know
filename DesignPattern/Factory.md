@@ -61,16 +61,16 @@ console.log('p2: \n', p2.getInTs());
 
 /*
  output
- p1: 
+p1: 
  [ { otT: 0, hrs: 2, inTs: 'A' },
   { otT: 0, hrs: 1, inTs: 'B' },
-  { otT: 0, hrs: undefined, inTs: undefined },
+  { otT: 0, hrs: 3, inTs: 'C' },
   { otT: 0, hrs: 1, inTs: 'D' },
   { otT: 0, hrs: undefined, inTs: undefined } ]
 p2: 
  [ { otT: 1, hrs: 2, inTs: 'F' },
   { otT: 1, hrs: 3, inTs: 'G' },
-  { otT: 1, hrs: undefined, inTs: undefined },
+  { otT: 1, hrs: 3, inTs: 'H' },
   { otT: 1, hrs: 5, inTs: 'I' } ]
 */
 ```
