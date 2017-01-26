@@ -11,11 +11,11 @@ var factory = (() => {
     this.getSet = (le, _temp) => {
       var _hrs = [];
       var _inTs = [];
-      for (var k = 0; k < le - 1; k++) {
+      for (var k = 0; k < le; k++) {
           _hrs[k] = this.hrs[k + 1] - this.hrs[k];
           _inTs[k] = this.inTs[k];
       }
-      if (_temp > this.hrs[le-1]) {
+      if (_temp > this.hrs[le]) {
         _hrs[le] = _temp - this.hrs[le];
         _inTs[le] =  this.inTs[le];
       }
