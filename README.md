@@ -18,5 +18,8 @@
 ### JS Clean Code Guide
  + [clean code](https://github.com/ryanmcdermott/clean-code-javascript)
 
+### Web Performance
++ [Web Perf](http://perf.rocks/)
+
 ### JS Questions
  + [5-typical-javascript-interview-exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
