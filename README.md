@@ -12,6 +12,7 @@
  + [Generator](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Generator.md)
  + [Function Programming](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/FunctionalProgramming.md)
  + [Regex](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Regex.md)
+ + [StrictMode](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/StrictMode.md)
 
 ### Others
 ### JS Clean Code Guide
