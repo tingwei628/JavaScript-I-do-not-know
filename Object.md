@@ -60,7 +60,20 @@ console.log(p1.myfunc === p2.myfunc); // false
 ```js
 this.myfunc = function() {} //等同于 this.myfunc = new Function() {} 
 // new新的function 
+
+* 解決方式: 另外建立一個function 給 object 的myfunc指向
+function P () {
+  this.name = 'ok';
+  this.myfunc = func1;
+}
+function func1() {
+  console.log(this.name);
+}
+var p1 = new P();
+var p2 = new P();
+console.log(p1.myfunc === p2.myfunc); // true, 指向同一個func1
 ```
+
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
