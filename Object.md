@@ -170,8 +170,10 @@ var P1 = new Person(); // P1 is the instance of Person
 Person.prototype.sayhello = function() {
   console.log('hi');
 }; // 即使 new 完後, 再加方法, P1 還是有該方法
-P1.sayhello(); // hi
+P1.sayhello(); // hi,  首先檢查 P1 有沒有sayhello, 然後檢查 prototype 有沒有sayhello
 ```
 > 連結 instance 和 prototype 的是指標(pointer) 而不是拷貝(copy by value)
+
+
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
