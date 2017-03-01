@@ -107,6 +107,10 @@ var P1 = new Person();
 var P2 = new Person(); 
 // function Person.prototype -> Person Prototype
 // Person Prototype 的 constructor -> function Person
+
+console.log(P1.__proto__ === Person.prototype); // true
+console.log(Person.prototype.constructor === Person); // true
+console.log(P1.constructor === Person); // true, P1 constructor 往上找到 Person Prototype
 ```
 
 ```
