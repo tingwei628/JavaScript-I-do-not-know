@@ -13,6 +13,7 @@
  + [Function Programming](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/FunctionalProgramming.md)
  + [Regex](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Regex.md)
  + [StrictMode](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/StrictMode.md)
+ + [Object](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Object.md)
  + [Others](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Others.md)
 
 ### Others
