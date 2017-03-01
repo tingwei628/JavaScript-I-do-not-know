@@ -36,6 +36,28 @@ Object.getOwnPropertyDescriptor(obj, 'name');
 */
 ```
 
+##Object 建立
+
+```js
+function P () {
+  this.name = 'ok';
+  this.myfunc = function() {
+    console.log(this.name);
+  }
+}
+var p1 = new P();
+var p2 = new P();
+console.log(p1 === p2); // 因為new兩個不同的物件
+console.log(p1.constructor === p2.constructor); // 其constructor 指向 P
+
+console.log(p1.name === p2.name); // true, 其值都是 'ok'
+console.log(p1.myfunc === p2.myfunc); // false
+
+```
+
+> 為什麼 p1.myfunc === p2.myfunc // false
+
+
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
