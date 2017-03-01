@@ -78,7 +78,8 @@ console.log(p1.myfunc === p2.myfunc); // true, 指向同一個func1
 
 * Prototype pattern
 
-承上 p1.myfunc === p2.myfunc 如何?
+> 承上 p1.myfunc === p2.myfunc 如何?
+
 ```js
 function P () {}
 P.prototype.name = 'ok';
@@ -91,7 +92,16 @@ var p2 = new P();
 console.log(p1.myfunc === p2.myfunc); // true !
 ```
 
+## Prototype 作用
 
+* 其function Person()建立起來時; 同時, function 的 prototype屬性也指向 function.ProtoType
+
+> 註: A->B (表示A指向B)
+```js
+function Person() {}
+// function Person.prototype -> Person Prototype
+// Person Prototype 的 constructor -> function Person
+```
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
