@@ -55,13 +55,13 @@ console.log(p1.myfunc === p2.myfunc); // false
 
 ```
 
-> 為什麼 p1.myfunc === p2.myfunc // false
+> 為什麼 p1.myfunc === p2.myfunc // false, (這也是constructor pattern 缺點)
 
 ```js
 this.myfunc = function() {} //等同于 this.myfunc = new Function() {} 
 // new新的function 
 
-* 解決方式: 另外建立一個function 給 object 的myfunc指向
+/* 解決方式: 另外建立一個function 給 object 的myfunc指向 */
 function P () {
   this.name = 'ok';
   this.myfunc = func1;
