@@ -140,6 +140,26 @@ console.log(P1.constructor === Person); // true, P1 constructor 往上找到 Per
 
 
 ```
+* 另一種 prototype pattern 表達
+```js
+function Person() {
+}
+Person.prototype = {
+  name: 'Jack',
+  sayhello: function() { console.log('hello, ', this.name);}
+};
+var P1 = new Person();
+console.log(P1.constructor === Person); // false,  原因是 Person.prototype 被覆寫
+
+// 改成
+Person.prototype = {
+  constructor, Person,
+  name: 'Jack',
+  sayhello: function() { console.log('hello, ', this.name);}
+};
+console.log(P1.constructor === Person); // true
+```
+
 
 
 
