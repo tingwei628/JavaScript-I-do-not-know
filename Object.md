@@ -167,12 +167,29 @@ console.log(P1.constructor === Person); // true
 function Person() {
 }
 var P1 = new Person(); // P1 is the instance of Person
-Person.prototype.sayhello = function() {
-  console.log('hi');
+Person.prototype.sayhello = function() { // 注意這時候的 prototype 還未被覆寫
+  console.log('hi');
 }; // 即使 new 完後, 再加方法, P1 還是有該方法
 P1.sayhello(); // hi,  首先檢查 P1 有沒有sayhello, 然後檢查 prototype 有沒有sayhello
+console.log(Person.prototype === Object.getPrototypeOf(P1)); // true, 還是同一個prototype
 ```
 > 連結 instance 和 prototype 的是指標(pointer) 而不是拷貝(copy by value)
+
+
+* prototype 被覆寫掉
+
+```js
+function Person() {
+}
+var P1 = new Person();
+Person.prototype = { // Person.prototype 被覆寫掉, 與原本的prototype 不同
+  constructor: Person,
+  name: 'Jack',
+  sayhello: function() { console.log('hello, ', this.name);}
+};
+P1.sayhello(); // error
+console.log(Person.prototype === Object.getPrototypeOf(P1)); // false !!
+```
 
 
 ##Reference 
