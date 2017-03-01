@@ -234,5 +234,27 @@ P1.sayhello(); // hi jack
 P2.sayhello(); // hi icon
 ```
 
+## Other Patterns
+
+* Parasitic pattern
+
+> constructor 裏面再return一層 array (或是object也可以)
+
+```js
+function SpecialArray(){
+  var values = []; 
+  values.push.apply(values, arguments);
+  values.toPipedString = function(){
+    return this.join('|');
+  };
+  return values;
+}
+var color = new SpecialArray('red', 'yellow');
+var color2 = new SpecialArray('red', 'green');
+console.log(color.toPipedString());   // 'red|yellow'
+console.log(color2.toPipedString());  // 'red|green'
+```
+
+
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
