@@ -1,40 +1,7 @@
-##Prototype
-__proto__: 實作的object 可以透過__proto__, 確認該上層function的prototype的屬性或方法
-
-prototype: function 的屬性(default), 可以隨意設定屬性或方法
-
-Example
-```js
-function a () {};
-var t = new a();
-t.__proto__ === a.prototype // true
-a.prototype.__proto__ === Object.prototype // true
-a.prototype.__proto__.__proto__ // null
-Object.prototype.__proto__ // null 物件的原型null
-```
+## [Prototype](https://github.com/tingwei628/JavaScript-I-do-not-know/edit/master/Object.md)
 
 
-## Inheritance (繼承)
-
-```js
-function createObject(o) { // o is {...}
-  function F() {}
-  F.prototype = o;
-  return new F(); 
-  // return F-based object 
-}
-
-// another example: child object inherites parent object
-// 首先 copy parent prototype
-var copyParentPrototype = createObject(parent.prototype);
-child.constructor = child;
-child.prototype = copyParentPrototype;
-
-// initial constructor same as F
-function B(prop) {
-  F.call(this, prop);
-}
-```
+## [Inheritance (繼承)](https://github.com/tingwei628/JavaScript-I-do-not-know/edit/master/Inheritance.md)
 
 > [混合繼承(Mixin)](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/) 
 
