@@ -99,7 +99,12 @@ console.log(p1.myfunc === p2.myfunc); // true !
 > 註: A->B (表示A指向B)
 
 ```js
-function Person() {}
+function Person() {
+}
+Person.prototype.name = 'Jack';
+Person.prototype.sayhello = function() {...}
+var P1 = new Person();
+var P2 = new Person(); 
 // function Person.prototype -> Person Prototype
 // Person Prototype 的 constructor -> function Person
 ```
