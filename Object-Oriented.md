@@ -1,4 +1,4 @@
-## [Prototype](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Object.md)
+## [Prototype](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Object.md#prototype-特性)
 
 ## [Inheritance (繼承)](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Inheritance.md)
 
