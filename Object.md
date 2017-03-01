@@ -219,6 +219,20 @@ console.log(Person.prototype === Object.getPrototypeOf(P1)); // false !!
 
 ```
 
+## Prototype pattern + Constructor pattern
+
+```js
+function Person(name) {
+  this.name = name // property 用constructor pattern
+}
+Person.prototype.sayhello = function() {
+  console.log('hi', this.name); // method 用 prototype pattern
+};
+var P1 = new Person('jack');
+var P2 = new Person('icon');
+P1.sayhello(); // hi jack
+P2.sayhello(); // hi icon
+```
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
