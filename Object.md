@@ -253,6 +253,9 @@ var color = new SpecialArray('red', 'yellow');
 var color2 = new SpecialArray('red', 'green');
 console.log(color.toPipedString());   // 'red|yellow'
 console.log(color2.toPipedString());  // 'red|green'
+console.log(color instanceof(SpecialArray)); // false 
+console.log(Object.getPrototypeOf(color) === SpecialArray.prototype); // false, 
+// 因為裡面已經array建立, prototype 應為Array.prototype
 ```
 
 
