@@ -22,5 +22,20 @@ obj.name = 'wow';
 console.log(obj.name); // hello 因為writable: false
 ```
 
+> Object.getOwnPropertyDescriptor 得知其property的特性
+
+```js
+var obj = { name: 123 };
+console.log(obj.name); // 123
+Object.getOwnPropertyDescriptor(obj, 'name');
+/*
+{ value: 123,
+  writable: true,
+  enumerable: true,
+  configurable: true }
+*/
+```
+
+
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
