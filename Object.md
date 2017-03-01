@@ -57,7 +57,9 @@ console.log(p1.myfunc === p2.myfunc); // false
 
 > 為什麼 p1.myfunc === p2.myfunc // false
 
-
+因為 this.myfunc = function() {} 
+等同于 this.myfunc = new Function() {} 
+new新的function
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
