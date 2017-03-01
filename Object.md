@@ -110,7 +110,7 @@ var P2 = new Person();
 
 console.log(P1.__proto__ === Person.prototype); // true
 console.log(Person.prototype.constructor === Person); // true
-console.log(P1.constructor === Person); // true, P1 constructor 往上找到 Person Prototype
+console.log(P1.constructor === Person); // true, P1 constructor 往上找到 Person Prototype 的constructor
 ```
 
 ```
@@ -149,11 +149,10 @@ Person.prototype = {
   sayhello: function() { console.log('hello, ', this.name);}
 };
 var P1 = new Person();
-console.log(P1.constructor === Person); // false,  原因是 Person.prototype 被覆寫
-
+console.log(P1.constructor === Person); // false,  原因是 Person.prototype 被覆寫, constructor 就不見
 // 改成
 Person.prototype = {
-  constructor, Person,
+  constructor: Person,
   name: 'Jack',
   sayhello: function() { console.log('hello, ', this.name);}
 };
