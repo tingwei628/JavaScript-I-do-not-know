@@ -38,6 +38,8 @@ Object.getOwnPropertyDescriptor(obj, 'name');
 
 ##Object 建立
 
+* Constructor pattern 
+
 ```js
 function P () {
   this.name = 'ok';
@@ -73,6 +75,22 @@ var p1 = new P();
 var p2 = new P();
 console.log(p1.myfunc === p2.myfunc); // true, 指向同一個func1
 ```
+
+* Prototype pattern
+
+承上 p1.myfunc === p2.myfunc 如何?
+```js
+function P () {}
+P.prototype.name = 'ok';
+P.prototype.name = function () {
+    console.log(this.name);
+  };
+
+var p1 = new P();
+var p2 = new P();
+console.log(p1.myfunc === p2.myfunc); // true !
+```
+
 
 
 ##Reference 
