@@ -1,7 +1,6 @@
-## [Prototype](https://github.com/tingwei628/JavaScript-I-do-not-know/edit/master/Object.md)
+## [Prototype](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Object.md)
 
-
-## [Inheritance (繼承)](https://github.com/tingwei628/JavaScript-I-do-not-know/edit/master/Inheritance.md)
+## [Inheritance (繼承)](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Inheritance.md)
 
 > [混合繼承(Mixin)](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/) 
 
