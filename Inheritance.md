@@ -74,5 +74,33 @@ Sub.prototype = {      // 又改寫 Sub.prototype...
 var p = new Sub();
 console.log(p.getSuper()); // error !
 ```
+
+## Prototype Chaining Problem (原型鏈的問題)
+
+- 定義在父層的property, 會被子層的instance**共享**
+
+```js
+function Super(str) {
+  this.superbool = str;
+}
+Super.prototype.getSuper = function() {
+  return this.superbool;
+};
+function Sub() {
+  this.subbool = 'from Sub';
+}
+
+Sub.prototype = new Super('hi');
+Sub.prototype.getSub = function() {
+  return this.subbool;
+};
+
+var p = new Sub();
+var p2 = new Sub();
+console.log(p.getSuper()); // hi
+console.log(p2.getSuper()); // hi, 共享 Super property
+```
+
+
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
