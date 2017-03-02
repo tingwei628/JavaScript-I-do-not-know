@@ -75,6 +75,32 @@ var p = new Sub();
 console.log(p.getSuper()); // error !
 ```
 
+* Constuctor Stealing (解決上述問題)
+
+```js
+function Super() {
+  this.numbers = [1,2,3];
+}
+Super.prototype.getSuper = function() {
+  return this.numbers;
+};
+function Sub() {
+  Super.call(this); // 純粹呼叫 Super
+}
+
+Sub.prototype = new Super();
+Sub.prototype.getSub = function() {
+  return this.numbers;
+};
+
+var p = new Sub();
+var p2 = new Sub();
+p.numbers.push(4);
+console.log(p.getSuper()); // [1,2,3,4]
+console.log(p2.getSuper()); // [1,2,3]
+```
+
+
 ## Prototype Chaining Problem (原型鏈的問題)
 
 - 定義在父層的property, 會被子層的instance**共享**
