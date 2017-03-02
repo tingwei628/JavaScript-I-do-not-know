@@ -142,6 +142,13 @@ Sub.prototype = new Super();
 var p = new Sub();
 console.log(p.getName()); // 'SubName'
 ```
+> it is not good enough for reusing function
+
+## Combination Inheritance (Pseudoclassical Inheritance)
+
+Prototype chaining + Constructor stealing
+```js
+```
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
