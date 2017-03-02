@@ -51,6 +51,28 @@ console.log(p.getSub()); // from Sub
 
 ```
 
+> 注意: 不要Sub.prototype = {...} 寫法
 
+```js
+function Super() {
+  this.superbool = 'from Super';
+}
+Super.prototype.getSuper = function() {
+  return this.superbool;
+};
+function Sub() {
+  this.subbool = 'from Sub';
+}
+Sub.prototype = new Super();
+
+Sub.prototype = {      // 又改寫 Sub.prototype...
+  getSub: function() {
+    return this.subbool;
+  }
+};
+
+var p = new Sub();
+console.log(p.getSuper()); // error !
+```
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
