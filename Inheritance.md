@@ -26,7 +26,7 @@ console.log(p instanceof Super);  // true
 console.log(p instanceof Sub);    // true
 ```
 
-* 覆寫 **被繼承**的方法
+* 覆寫**被繼承**的方法
 ```js
 function Super() {
   this.superbool = 'from Super';
@@ -46,8 +46,8 @@ Sub.prototype.getSuper = function() { // 覆寫 繼承到getSuper方法
   return 'It is Overrided by Sub';
 }
 var p = new Sub();
-console.log(p.getSuper());
-console.log(p.getSub());
+console.log(p.getSuper()); // It is Overrided by Sub
+console.log(p.getSub()); // from Sub
 
 ```
 
