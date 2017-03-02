@@ -126,6 +126,21 @@ console.log(p.getSuper()); // [1,2,3,4]
 console.log(p2.getSuper()); // [1,2,3]
 console.log(Object.getPrototypeOf(Sub) === Function.prototype); // true, 因為Super.call 單純Function呼叫
 console.log(Object.getPrototypeOf(Sub) === Super.prototype); // false
+
+
+// Pass arguments
+function Super(name) {
+  this.name = name;
+}
+Super.prototype.getName = function() {
+  return this.name;
+};
+function Sub() {
+  Super.call(this, 'SubName'); // pass arguments
+}
+Sub.prototype = new Super();
+var p = new Sub();
+console.log(p.getName()); // 'SubName'
 ```
 
 ##Reference 
