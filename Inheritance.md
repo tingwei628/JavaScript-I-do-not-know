@@ -75,32 +75,6 @@ var p = new Sub();
 console.log(p.getSuper()); // error !
 ```
 
-* Constuctor Stealing (解決上述問題)
-
-```js
-function Super() {
-  this.numbers = [1,2,3];
-}
-Super.prototype.getSuper = function() {
-  return this.numbers;
-};
-function Sub() {
-  Super.call(this); // 純粹呼叫 Super
-}
-
-Sub.prototype = new Super();
-Sub.prototype.getSub = function() {
-  return this.numbers;
-};
-
-var p = new Sub();
-var p2 = new Sub();
-p.numbers.push(4);
-console.log(p.getSuper()); // [1,2,3,4]
-console.log(p2.getSuper()); // [1,2,3]
-```
-
-
 ## Prototype Chaining Problem (原型鏈的問題)
 
 - 定義在父層的property, 會被子層的instance**共享**
@@ -127,6 +101,32 @@ console.log(p.getSuper()); // hi
 console.log(p2.getSuper()); // hi, 共享 Super property
 ```
 
+* Constuctor Stealing (解決上述問題)
+
+```js
+function Super() {
+  this.numbers = [1,2,3];
+}
+Super.prototype.getSuper = function() {
+  return this.numbers;
+};
+function Sub() {
+  Super.call(this); // 純粹呼叫 Super
+}
+
+Sub.prototype = new Super();
+Sub.prototype.getSub = function() {
+  return this.numbers;
+};
+
+var p = new Sub();  // 每次 new , 都是呼叫 新的Super constructor
+var p2 = new Sub(); // 每次 new , 都是呼叫 新的Super constructor
+p.numbers.push(4);
+console.log(p.getSuper()); // [1,2,3,4]
+console.log(p2.getSuper()); // [1,2,3]
+console.log(Object.getPrototypeOf(Sub) === Function.prototype); // true, 因為Super.call 單純Function呼叫
+console.log(Object.getPrototypeOf(Sub) === Super.prototype); // false
+```
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
