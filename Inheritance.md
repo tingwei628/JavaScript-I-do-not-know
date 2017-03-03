@@ -253,14 +253,15 @@ function Super(name) {
 Super.prototype.getName = function() {
   console.log(this.name);
 };
-function Sub(name, age) {
-  Super.call(this, name); // Super 被呼叫第一次!
+function Sub(name, age) { // <----
+  Super.call(this, name);
   this.age = age;
 }
-Sub.prototype = new Super(); // Super 被呼叫第二次 !
+Sub.prototype = new Super(); // Super 被呼叫第一次 !
 Sub.prototype.getAge = function() {
   console.log(this.age);
 };
+var p1 = new Sub(); // Super 被呼叫第二次 !
 ```
 
 
