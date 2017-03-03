@@ -239,10 +239,9 @@ console.log(person.friends);
 // [ 'Jay', 'Dick', 'P1', 'P2' ],
 // 因為p1沒有friends, 所以直接去找上層的prototype 的 friends 屬性, 即person!!
 
-// 因為 F.prototype = person, prototype 共享
 ```
 
-| Object.create() 等同上述的 createObject()
+> Object.create() 等同上述的 createObject()
 
 
 
