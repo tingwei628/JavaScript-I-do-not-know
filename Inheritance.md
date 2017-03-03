@@ -243,6 +243,25 @@ console.log(person.friends);
 
 > Object.create() 等同上述的 createObject()
 
+## Parasitic Combination Inheritance
+
+* 上述的繼承方式 Super 被呼叫兩次, 沒效率
+```js
+function Super(name) {
+  this.name = name;
+}
+Super.prototype.getName = function() {
+  console.log(this.name);
+};
+function Sub(name, age) {
+  Super.call(this, name); // Super 被呼叫第一次!
+  this.age = age;
+}
+Sub.prototype = new Super(); // Super 被呼叫第二次 !
+Sub.prototype.getAge = function() {
+  console.log(this.age);
+};
+```
 
 
 ##Reference 
