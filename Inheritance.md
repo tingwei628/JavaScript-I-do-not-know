@@ -264,6 +264,37 @@ Sub.prototype.getAge = function() {
 var p1 = new Sub(); // Super 被呼叫第二次 !
 ```
 
+* 解決方式
+
+```js
+function Super(name) {
+  this.name = name
+}
+Super.prototype.getName = function() {
+  console.log(this.name);
+}
+function Sub(name, age) {
+  Super.call(this, name);
+  this.age = age;
+}
+function createObject(o) {
+  function F() {}
+  F.prototype = o;
+  return new F();
+}
+
+var tempPrototype = createObject(Super.prototype); // tempPrototype, 中間層
+tempPrototype.constructor = Sub;
+Sub.prototype = tempPrototype;
+
+Sub.prototype.getAge = function() {
+  console.log(this.age);
+};
+var p = new Sub('Jack', 24);
+console.log(p.getName()); // 'Jack'
+console.log(p.getAge()) // 24
+```
+
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
