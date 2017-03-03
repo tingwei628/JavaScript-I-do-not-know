@@ -188,8 +188,26 @@ console.log(p.getName()); // 'SubName'
 
 Prototype chaining + Constructor stealing
 ```js
-
-
+function Super(name) {
+  this.name = name;
+}
+Super.prototype.getName = function() {
+  console.log(this.name);
+};
+function Sub(name, age) {
+  Super.call(this, name); // pass arguments
+  this.age = age;
+}
+Sub.prototype = new Super();
+Sub.prototype.getAge = function() {
+  console.log(this.age);
+};
+var p1 = new Sub('A', 12);
+console.log(p1.getName()); // 'A', 未受p1影響
+console.log(p1.getAge());  // 12, 未受p1影響
+var p2 = new Sub('B', 15); 
+console.log(p2.getName()); // 'B', 未受p2影響
+console.log(p2.getAge()); // 15, 未受p2影響
 ```
 
 ##Reference 
