@@ -184,7 +184,7 @@ console.log(p.getName()); // 'SubName'
 ```
 > it is not good enough for reusing function
 
-## Combination Inheritance (Pseudoclassical Inheritance)
+## Combination Inheritance (Pseudoclassical Inheritance) (大多數使用)
 
 Prototype chaining + Constructor stealing
 ```js
@@ -209,6 +209,42 @@ var p2 = new Sub('B', 15);
 console.log(p2.getName()); // 'B', 未受p1影響
 console.log(p2.getAge()); // 15, 未受p1影響
 ```
+
+##Prototypal Inheritance
+
+> Douglas Crockford 提出
+
+```js
+var person = {
+  friends: ['Jay', 'Dick'],
+  name: 'Gray'
+};
+
+function createObject(o) {
+  function F() {}
+  F.prototype = o;
+  return new F();
+}
+var p1 = createObject(person);
+var p2 = createObject(person);
+p1.name = 'P1';
+p1.friends.push('P1');
+console.log(person.friends); 
+// [ 'Jay', 'Dick', 'P1' ], 
+// 因為p1沒有friends, 所以直接去找上層的prototype 的 friends 屬性, 即person !!
+
+p2.name = 'P2';
+p2.friends.push('P2');
+console.log(person.friends); 
+// [ 'Jay', 'Dick', 'P1', 'P2' ],
+// 因為p1沒有friends, 所以直接去找上層的prototype 的 friends 屬性, 即person!!
+
+// 因為 F.prototype = person, prototype 共享
+```
+
+| Object.create() 等同上述的 createObject()
+
+
 
 ##Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
