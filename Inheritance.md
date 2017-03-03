@@ -12,7 +12,7 @@ function Sub() {
 }
 
 // Sub 繼承 Super
-Sub.prototype = new Super();
+Sub.prototype = new Super(); // construtor建立起來,(this.superbool = 'from Super'), 給Sub.prototype
 Sub.prototype.getSub = function() {
    return this.subbool;
 };
@@ -24,6 +24,8 @@ console.log(Sub.prototype.__proto__ === Super.prototype); // true
 console.log(p instanceof Object); // true
 console.log(p instanceof Super);  // true
 console.log(p instanceof Sub);    // true
+
+(請見下圖)
 ```
 
 ```
@@ -117,7 +119,7 @@ console.log(p.getSuper()); // error !
 
 ```js
 function Super(str) {
-  this.superbool = str;
+  this.superbool = [str];
 }
 Super.prototype.getSuper = function() {
   return this.superbool;
@@ -133,8 +135,10 @@ Sub.prototype.getSub = function() {
 
 var p = new Sub();
 var p2 = new Sub();
-console.log(p.getSuper()); // hi
-console.log(p2.getSuper()); // hi, 共享 Super property
+console.log(p.getSuper()); // ['hi']
+p.superbool.push('hi2');
+console.log(p.getSuper()); // ['hi', 'hi2']
+console.log(p2.getSuper()); // ['hi','hi2'], 因為new Super 的 this.superbool 變成Sub.prototype, 又因為prototype 共享property!
 ```
 
 * Constuctor Stealing (解決上述問題)
@@ -184,6 +188,8 @@ console.log(p.getName()); // 'SubName'
 
 Prototype chaining + Constructor stealing
 ```js
+
+
 ```
 
 ##Reference 
