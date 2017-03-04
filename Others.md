@@ -19,3 +19,14 @@ foo(); // 10  竟然!
 void 0; // undefined
 void 'anything_you_want'; // undefined
 ```
+
+### 3. reverse array with reduceRight
+
+```js
+function reverse(arr) {
+  return arr.reduceRight(function(prev, curr) {
+    return prev.concat(curr)
+  }, []);
+}
+reverse([1,2,3]); // [3,2,1]
+```
