@@ -16,7 +16,7 @@
  + [Object](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Object.md)
  + [Inheritance](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Inheritance.md)
  + [Others](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Others.md)
-
+ + [ES2015](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/ES2015.md)
 ### Others
 ### JS Clean Code Guide
  + [clean code](https://github.com/ryanmcdermott/clean-code-javascript)
