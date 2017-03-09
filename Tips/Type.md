@@ -8,6 +8,14 @@
 > object type 會依照 valueOf() 或 toString() 轉型primitive type, 再來一起比較
 
 ```js
+function P(num) {
+  this.num = num;
+}
+P.prototype.valueOf = function() {
+  return this.num + 5;
+};
+var p1 = new P(0);
+console.log(p1 > 3); // (5+0) > 3
 ```
 
 
