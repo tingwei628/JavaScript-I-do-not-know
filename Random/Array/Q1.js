@@ -5,10 +5,12 @@
 */
 
 // _ :lodash 符號
+// 依 a, b 條件 groupBy 
+// filter
 var r = _.filter(_.groupBy(x, (e) => `${e.a}${e.b}`), (k) => {
-  if (k.length > 1) {
-   return k.map((t) => { t.re = true; return t });
+  if (k.length > 1) { // filter 條件
+   return k.map((t) => t );
   }
 });
-var ans = r.reduce((prev, curr) => prev.concat(curr), []);
-console.log(ans); // []
+var ans = r.reduce((prev, curr) => prev.concat(curr), []); // flatten array
+console.log(ans); // [{a: 1, b: 1}, {a: 1, b: 1}]
