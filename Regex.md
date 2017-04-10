@@ -27,6 +27,14 @@ var re = /abc/i
 
 ### [\1 的意思](http://stackoverflow.com/questions/8624345/whats-the-meaning-of-a-number-after-a-backslash-in-a-regular-expression)
 
+### Example
+
+```js
+/(\w)\1/g     // 表示 連續2個相同的字元
+
+/([aeiouy]{2,})/g // 表示 只要包括 aeiouy 內的字元, 至少連續2個以上
+```
+
 
 ### Reference
 
