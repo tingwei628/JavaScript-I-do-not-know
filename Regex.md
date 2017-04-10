@@ -25,6 +25,9 @@ var re = /abc/i
 
 ```
 
+### [\1 的意思](http://stackoverflow.com/questions/8624345/whats-the-meaning-of-a-number-after-a-backslash-in-a-regular-expression)
+
+
 ### Reference
 
 - [Regexp theory](https://aotu.io/notes/2016/11/17/regexp-theory/)
