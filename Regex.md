@@ -48,6 +48,18 @@ var re = /abc/i
   例如: ae  就符合
 */
 ```
+---
+
+```js
+var fileName = "ex.gyt.js";
+(/.+\.js/g).test(file); // true
+
+/*
+  檢查副檔名為.js
+*/
+
+```
+
 
 
 ### Reference
