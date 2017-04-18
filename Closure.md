@@ -1,5 +1,7 @@
 ## 閉包
 
+> [for-loop in closure](http://exploringjs.com/es6/ch_variables.html#sec_let-const-loop-heads)
+
 ### 應用
 
 1. 區域變數可被快取
@@ -31,4 +33,37 @@ function memorize(fn) { // 記憶
 // 第二次 same 6 直接回傳快取結果
 
 
+```
+
+## 迴圈裡面的閉包
+
+```js
+const arr = [];
+for (let i=0; i < 2; i++) {
+    arr.push(() => i);
+}
+arr.map(x => x()); // [3,3,3], 並未依序印出來 [1,2,3] ?
+```
+
+### 有兩種方式改寫
+
+* 用bind的方式
+
+```js
+var a = [];
+for (var i=0; i < 3; i++) {
+    a.push(((i_local) => i_local).bind(null, i));
+}
+a.map(x => x()); // [0,1,2]
+```
+
+
+* 使用ES6 let
+
+```js
+var ar = [];
+for (let i=0; i < 3; i++) {
+    ar.push(() => i);
+}
+ar.map(x => x()); // [0,1,2]
 ```
