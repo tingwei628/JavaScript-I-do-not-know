@@ -20,6 +20,7 @@
  + [Tips](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/Tips)
  
 ### Others
+ + Event delegation
 
 ### JS Clean Code Guide
  + [clean code](https://github.com/ryanmcdermott/clean-code-javascript)
