@@ -39,10 +39,10 @@ function memorize(fn) { // 記憶
 
 ```js
 const arr = [];
-for (let i=0; i < 2; i++) {
+for (let i=0; i < 3; i++) {
     arr.push(() => i);
 }
-arr.map(x => x()); // [3,3,3], 並未依序印出來 [1,2,3] ?
+arr.map(x => x()); // [3,3,3], 並未依序印出來 [0,1,2] ?
 ```
 
 ### 有兩種方式改寫
