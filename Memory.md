@@ -1,4 +1,5 @@
 > Thanks to [How JavaScript works: memory management + how to handle 4 common memory leaks@Alexander Zlatkov](https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec)
+   
 
 
 ## 記憶體洩漏
@@ -23,21 +24,11 @@
 
  ### JS 發生記憶體情境
  
-   - 全域變數的property
-   - 事件的handler內, 使用DOM node, 但事件取消時, 尚未移除其事件handler (removeEventListener)
+   * 全域變數的property
+   
+   * 事件的handler內, 使用DOM node, 但事件取消時, 尚未移除其事件handler (removeEventListener)
      導致其DOM-node一直被參考
 
 
 
-     ```js
-      
-      
-     var node = document.getElementById("myId");
-     function onClick() { node.innerHTML = '123' };
-     node.addEventListener('click', onClick);
 
-     //
-     node.removeListener('click', onClick); // <--- 記得要移除
-     
-     
-     ```
