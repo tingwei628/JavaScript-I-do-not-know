@@ -26,6 +26,7 @@
  
    * 全域變數的property
    
+   
    * 事件的handler內, 使用DOM node, 但事件取消時, 尚未移除其事件handler (removeEventListener)
      導致其DOM-node一直被參考
 
