@@ -38,5 +38,9 @@
      node.addEventListener('click', onClick);
 
      
-     node.removeListener('click', onClick);    
+     node.removeListener('click', onClick); // <--- 記得要 removeListener
 ```
+   * Closure
+
+
+
