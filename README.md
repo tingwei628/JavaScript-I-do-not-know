@@ -18,6 +18,7 @@
  + [Others](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Others.md)
  + [ES2015](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/ES2015.md)
  + [Tips](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/Tips)
+ + [Memory](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Memory.md)
  
 ### Others
  + Event delegation
