@@ -31,7 +31,9 @@ callback here
 
 ```
 
-* 另外一提, Promise 屬於microTasks, setTimeout 屬於Tasks
+* 另外一提, 如: Promise, Object.observer, process.nextTick 屬於microTask;
+ 
+  setTimeInverval, setImmediate, setTimeout 屬於Tasks
 
 一般來說, 先執行, microTasks 完後, 再執行 setTimeout
 
