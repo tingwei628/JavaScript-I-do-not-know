@@ -1,5 +1,7 @@
 ##  Event Loop
 
+> 事件迴圈是重複等事件, 一等到就處理, 處理完後, 再繼續等下一件未處理的事件, 直到所有事件處理完
+
 JavaScript 本身是單執行緒, 但如何做到 非阻塞(Non-Blocking)這件事情?
 
 ANS: Event Loop(事件迴圈) + Callback Queue
@@ -46,4 +48,8 @@ callback here
 
 > libuv (written in C): 非同步框架
 
+
+### Reference
+
+- https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/EventLoop
 
