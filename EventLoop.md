@@ -40,3 +40,10 @@ callback here
 [參考](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 
 
+### Node.JS 本身是可以實作多執行緒的, 原因是C++ 有實作執行緒池(Thread Pool)
+
+> Node.JS = libuv + V8 engine (written in C++)
+
+> libuv (written in C): 非同步框架
+
+
