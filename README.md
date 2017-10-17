@@ -20,6 +20,7 @@
  + [Tips](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/Tips)
  + [Memory](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Memory.md)
  + [EventLoop](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/EventLoop.md)
+ + [Polyfill-Shim](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Polyfills-Shim.md)
  
 ### Others
  + Event delegation
