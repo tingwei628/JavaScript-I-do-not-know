@@ -1,4 +1,4 @@
-### Jest_Note
+## Jest_Note
 
 
 ### Basic
@@ -20,9 +20,23 @@ describe("test suite 1", () => {
 ``` 
 
 ### Test Its Value
-```
 
+```js
 
+// toBe, test best() === "grape" 
+expect(best()).toBe('grape');
+
+//toBeTruthy, test data === true
+expect(data).toBeTruthy();
+
+//toBeFalsy, test data === false
+expect(data).toBeFalsy();
+
+//toEqual, test can1 === can2
+expect(can1).toEqual(can2);
+
+//toHaveProperty, test object "house" has property "bath"
+expect(house).toHaveProperty('bath');
 
 
 ```
