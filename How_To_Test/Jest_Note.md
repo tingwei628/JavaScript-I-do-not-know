@@ -1,6 +1,5 @@
-### CheatSheet
+### Jest_Note
 
-> Jest
 
 ### Basic
 
@@ -40,7 +39,9 @@ function drink(flavor) {
 function testDrink() {
   drink("junk")
 }
+```
 
+```js
  // test.js
  test('throws on error', () => {
    
