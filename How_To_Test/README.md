@@ -4,7 +4,11 @@
 ### Definition
 
 - Mock
+
 - Stub
+```
+監看式
+```
 - Spy
 
 
