@@ -74,6 +74,6 @@ t.next().value; // 3
 ```
 
 
-###Reference
+### Reference
 
 1. [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
