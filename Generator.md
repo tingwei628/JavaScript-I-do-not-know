@@ -40,7 +40,6 @@ The result shows below:
 
 ### How to make a custom iterator?
 ```js
-> Part 1
 var a = 
 {
   [Symbol.iterator]:() => 
@@ -69,17 +68,48 @@ console.log(t.next()); //{ value: 'byebye', done: true }
 console.log([...a]); // [0, 1, 2, 3, 4]
                       // This is Iterable :)
                       
-
-0
-1
-2
-3
-4
-
-
-
+for(let i of a)
+{
+   console.log(i);
+   /*
+      0
+      1
+      2
+      3
+      4
+   */
+}
 ```
 
+### Fake Iterator
+
+```js
+
+var a1 = () => 
+{
+  return ({
+    _i:0,
+    next: function()
+    {
+      return this._i < 5 ? 
+        {value: this._i++, done: false} : 
+        {value: 'byebye', done: true};
+      
+    }
+  });
+};
+
+var t1 = a1();
+  
+console.log(t.next()); //{ value: 0, done: false }
+console.log(t.next()); //{ value: 1, done: false } 
+console.log(t.next()); //{ value: 2, done: false } 
+console.log(t.next()); //{ value: 3, done: false } 
+console.log(t.next()); //{ value: 4, done: false } 
+console.log(t.next()); //{ value: 'byebye', done: true }
+
+```
+> **NOTE: This is not "Iterable" because it did not have "Symbol.iterator"**
 
 ### Use case of "Generator"
 > function* => yield
