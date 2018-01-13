@@ -210,7 +210,7 @@ console.log(p2.getName()); // 'B', 未受p1影響
 console.log(p2.getAge()); // 15, 未受p1影響
 ```
 
-##Prototypal Inheritance
+## Prototypal Inheritance
 
 > Douglas Crockford 提出
 
@@ -296,5 +296,5 @@ console.log(p.getAge()) // 24
 ```
 
 
-##Reference 
+## Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
