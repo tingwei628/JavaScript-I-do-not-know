@@ -48,6 +48,7 @@ myIterable[Symbol.iterator] = function* () {
     yield 2;
     yield 3;
 };
+[...myIterable] // [1,2,3]
 
 ```
 
