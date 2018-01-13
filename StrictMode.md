@@ -1,4 +1,4 @@
-Strict Mode
+## Strict Mode
 
 ```js
 "use strict";
