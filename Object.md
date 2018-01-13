@@ -36,7 +36,7 @@ Object.getOwnPropertyDescriptor(obj, 'name');
 */
 ```
 
-##Object 建立
+## Object 建立
 
 * Constructor pattern 
 
@@ -259,5 +259,5 @@ console.log(Object.getPrototypeOf(color) === SpecialArray.prototype); // false,
 ```
 
 
-##Reference 
+## Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
