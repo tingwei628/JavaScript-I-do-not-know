@@ -38,7 +38,51 @@ The result shows below:
 */
 ```
 
+### How to make a custom iterator?
+```js
+> Part 1
+var a = 
+{
+  [Symbol.iterator]:() => 
+  ({
+    _i: 0,
+    next: function()
+    {
+
+        return this._i < 5 ? {value: this._i++, done: false} : {value: 'byebye', done: true};
+      
+    }
+  })
+};
+
+// Sysmol.iterator is a symbol for iterator
+// it can be recognized by for...of
+var t = a[Symbol.iterator]();
+
+console.log(t.next()); //{ value: 0, done: false }
+console.log(t.next()); //{ value: 1, done: false } 
+console.log(t.next()); //{ value: 2, done: false } 
+console.log(t.next()); //{ value: 3, done: false } 
+console.log(t.next()); //{ value: 4, done: false } 
+console.log(t.next()); //{ value: 'byebye', done: true }
+  
+console.log([...a]); // [0, 1, 2, 3, 4]
+                      // This is Iterable :)
+                      
+
+0
+1
+2
+3
+4
+
+
+
+```
+
+
 ### Use case of "Generator"
+> function* => yield
 
 * case1: Object
 ```js
