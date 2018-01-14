@@ -295,6 +295,38 @@ console.log(p.getName()); // 'Jack'
 console.log(p.getAge()) // 24
 ```
 
+## 使用Object.create 實現繼承
+
+> 參考MDN文件
+
+```js
+function Base()
+{
+  // defined fields of Base
+}
+
+Base.prototype.baseMethod = function()
+{
+  // defined methods of Base
+}
+
+function Extend()
+{
+  // defined fields of Extend
+  Base.call(this); // define base constructor
+}
+
+// call base constructor 
+// connect together with base constructor
+Extend.prototype = Object.create(Base.prototype);
+
+//why? Because, Extend.prototype was override, so it needed to redefined
+Extend.prototype.constructor = Extend;
+
+var o = new Extend(); // use it :)
+
+```
+
 
 ## Reference 
 - [JavaScript 高級程序設計(第3版)](https://www.tenlong.com.tw/products/9787115275790)
