@@ -148,6 +148,26 @@ t.next().value; // 2
 t.next().value; // 3
 ```
 
+### Delegate the generator yield*
+
+```js
+var myIterable = function*(gen) {
+  // 接受 gen 這個 generator
+  yield* gen()
+}
+var onegen = function*()
+{
+  yield 1;
+  yield 2;
+  yield 3;
+}
+var t = myIterable(onegen);
+
+t.next(); // {value: 1, done: false}
+t.next(); // {value: 2, done: false}
+t.next(); // {value: 3, done: false}
+t.next(); // {value: undefined, done: true}
+```
 
 ### Reference
 
