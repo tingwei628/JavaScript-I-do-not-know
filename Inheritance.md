@@ -320,6 +320,10 @@ function Extend()
 // connect together with base constructor
 Extend.prototype = Object.create(Base.prototype);
 
+Extend.prototype.extendMethod = function()
+{
+   //defined method of Extend
+}
 //why? Because, Extend.prototype was override, so it needed to redefined
 Extend.prototype.constructor = Extend;
 
