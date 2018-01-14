@@ -169,6 +169,32 @@ t.next(); // {value: 3, done: false}
 t.next(); // {value: undefined, done: true}
 ```
 
+### Compose the multiple generators
+
+```js
+var myIterable = function*(...gens)
+{
+  for(let gen of gens)
+  {
+    yield* gg();
+  }
+}
+var onegen = function*()
+{
+  yield 1;
+  yield 2;
+  yield 3;
+}
+var twogen = function*()
+{
+  yield 4;
+  yield 5;
+  yield 6;
+}
+var t = myIterable(onegen, twogen);
+```
+
+
 ### Reference
 
 1. [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
