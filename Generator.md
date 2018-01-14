@@ -203,6 +203,21 @@ t.next(); //{value: 6, done: false}
 t.next(); //{value: undefined, done: true}
 ```
 
+### Return and Next
+
+```js
+function* g()
+{
+  yield 1;
+  yield 2;
+  return 33;
+}
+var t = g();
+t.next(); //{value: 1, done: false}
+t.next(); //{value: 2, done: false}
+t.next();  //{value: 33, done: true}
+// t.return(111); // {value: 111, done: true}
+```
 
 ### Reference
 
