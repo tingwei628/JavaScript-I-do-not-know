@@ -172,6 +172,7 @@ t.next(); // {value: undefined, done: true}
 ### Compose the multiple generators
 
 ```js
+// for composing those generators
 var myIterable = function*(...gens)
 {
   for(let gen of gens)
@@ -179,6 +180,7 @@ var myIterable = function*(...gens)
     yield* gg();
   }
 }
+
 var onegen = function*()
 {
   yield 1;
@@ -192,6 +194,13 @@ var twogen = function*()
   yield 6;
 }
 var t = myIterable(onegen, twogen);
+t.next(); //{value: 1, done: false}
+t.next(); //{value: 2, done: false}
+t.next(); //{value: 3, done: false}
+t.next(); //{value: 4, done: false}
+t.next(); //{value: 5, done: false}
+t.next(); //{value: 6, done: false}
+t.next(); //{value: undefined, done: true}
 ```
 
 
