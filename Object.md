@@ -111,6 +111,10 @@ var P2 = new Person();
 console.log(P1.__proto__ === Person.prototype); // true
 console.log(Person.prototype.constructor === Person); // true
 console.log(P1.constructor === Person); // true, P1 constructor 往上找到 Person Prototype 的constructor
+//說明:
+//Person 本身就是 Person.prototype的 constructor(建構子)
+//當var P1 = new Person() 時, 其P1的建構子就是Person本身的function
+
 ```
 
 ```
