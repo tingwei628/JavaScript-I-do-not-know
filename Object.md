@@ -83,7 +83,7 @@ console.log(p1.myfunc === p2.myfunc); // true, 指向同一個func1
 ```js
 function P () {}
 P.prototype.name = 'ok';
-P.prototype.name = function () {
+P.prototype.myfunc = function () {
     console.log(this.name);
   };
 
