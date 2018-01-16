@@ -255,3 +255,4 @@ class Enumerable {
 ### Reference
 
 1. [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
+2. [lazy-linq@Anstinus](https://github.com/Anstinus/lazy-linq)
