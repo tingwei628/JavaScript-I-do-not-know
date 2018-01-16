@@ -221,13 +221,16 @@ t.next();  //{value: 33, done: true}
 
 ### More Examples
 
+> ES6
+
 ```js
 class Enumerable {
   constructor(iterator, your_initial_array) {
     //給定一個iterator
     this[Symbol.iterator] = iterator;
-    if (baseObject) {
-      this.initialArray = your_initial_array;
+    if (your_initial_array) {
+      //初始化
+      this.initialArray = your_initial_array;
     }
   }
 
