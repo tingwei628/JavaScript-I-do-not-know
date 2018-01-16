@@ -219,6 +219,36 @@ t.next();  //{value: 33, done: true}
 // t.return(111); // {value: 111, done: true}
 ```
 
+### More Examples
+
+```js
+class Enumerable {
+  constructor(iterator, your_initial_array) {
+    //給定一個iterator
+    this[Symbol.iterator] = iterator;
+    if (baseObject) {
+      this.initialArray = your_initial_array;
+    }
+  }
+
+  // 一切都從 this
+  // for(let x of this) => 就會找this[Symbol.iterator]
+}
+```
+
+> 判斷 obj is Enumerable
+
+```js
+  
+  //判斷obj的原型鍊是否包含 Enumerable
+  if (Enumerable.prototype.isPrototypeOf(obj)) {
+    return obj;
+  }
+  //判斷obj 是否包含Symbol.iterator
+  if (obj[Symbol.iterator]()) {
+    return obj[Symbol.iterator];
+  }
+```
 ### Reference
 
 1. [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)
