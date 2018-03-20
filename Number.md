@@ -21,14 +21,36 @@ UTF-16: 以16bit (=2Byte)表示一個字
 
 - 舉例: 繁體中文字 "漢" = 0x6F22 (Unicode 16進位表示)
 
+- UTF16
+> "漢" = 0x6F22
 ```
 6F 
 22 
 ```
 
+
+- UTF8
+> "漢" UTF-8 編碼= 0xE6 0xBC 0xA2
+
+|碼點的位數|	碼點起值|	碼點終值|	位元組序列|	Byte 1|	Byte 2|	Byte 3|	Byte 4|	Byte 5|	Byte 6|
+|--------|------- |--------|---------|--------|-------|--------|-------|------|-------|
+|7       |U+0000|U+007F|	1|	0xxxxxxx||||||
+|11      |U+0080|	U+07FF|	2|	110xxxxx|	10xxxxxx|||||
+|16|	U+0800|	U+FFFF|	3|	1110xxxx|	10xxxxxx|	10xxxxxx||||
+|21|	U+10000|	U+1FFFFF|	4|	11110xxx|	10xxxxxx|	10xxxxxx|	10xxxxxx|||
+|26|	U+200000|	U+3FFFFFF|	5|	111110xx|	10xxxxxx|	10xxxxxx|	10xxxxxx|	10xxxxxx||
+|31|	U+4000000|	U+7FFFFFFF|	6|	1111110x|	10xxxxxx|	10xxxxxx|	10xxxxxx|	10xxxxxx|	10xxxxxx|
+
+
+[原理參照]()
+```js
+parseInt(11100110,2).toString(16);//"e6"
+parseInt(10111100,2).toString(16);//"bc"
+parseInt(10100010,2).toString(16);//"a2"
 ```
 
-```
+
+### 轉換規則
 
 ```js
 var a = "漢".charCodeAt(0); // 28450, 取得unicode, 10進位表示
