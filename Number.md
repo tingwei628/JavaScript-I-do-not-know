@@ -9,3 +9,8 @@
 0x10 = 16(1*16 = 16), 
 0xF0 = 240 (F=15 => 15*16=240)
 ```
+
+
+### Unicode, UTF-8, UTF-16 
+
+> [Unicode](https://zh.wikipedia.org/wiki/Unicode)
