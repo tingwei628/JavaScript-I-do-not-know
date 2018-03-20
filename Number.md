@@ -42,7 +42,7 @@ UTF-16: 以16bit (=2Byte)表示一個字
 |31|	U+4000000|	U+7FFFFFFF|	6|	1111110x|	10xxxxxx|	10xxxxxx|	10xxxxxx|	10xxxxxx|	10xxxxxx|
 
 
-[原理參照]()
+[原理參照](https://zh.wikipedia.org/wiki/UTF-8)
 ```js
 parseInt(11100110,2).toString(16);//"e6"
 parseInt(10111100,2).toString(16);//"bc"
