@@ -47,6 +47,10 @@ UTF-16: 以16bit (=2Byte)表示一個字
 parseInt(11100110,2).toString(16);//"e6"
 parseInt(10111100,2).toString(16);//"bc"
 parseInt(10100010,2).toString(16);//"a2"
+
+
+//也可以用encodeURI()
+encodeURI("漢") //"%E6%BC%A2"
 ```
 
 
