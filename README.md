@@ -24,6 +24,7 @@
  + [Algorithms](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/Algorithms)
  + [How_To_Test](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/How_To_Test)
  + [Async/Await](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/AsyncAwait.md)
+ + [Number](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Number.md)
  
 ### Others
  + Event delegation
