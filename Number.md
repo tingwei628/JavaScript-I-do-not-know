@@ -33,7 +33,7 @@ UTF-16: 以16bit (=2Byte)表示一個字
 ```js
 var a = "漢".charCodeAt(0); // 28450, 取得unicode, 10進位表示
 "漢".charCodeAt(0).toString(16); // "6f22", 取得unicode, 16進位表示
-28450.toString(16); // "6f22", 10進位轉16進位
+(28450).toString(16); // "6f22", 10進位轉16進位, NOTE：數字要用括號括起來
 parseInt("6f22",16) // 28450, 16進位轉10進位
 
 //0x6F22.toString(16); // "6f22"
