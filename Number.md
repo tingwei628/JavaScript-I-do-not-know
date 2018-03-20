@@ -31,10 +31,13 @@ UTF-16: 以16bit (=2Byte)表示一個字
 ```
 
 ```js
-"漢".charCodeAt(0); // 28450
-"漢".charCodeAt(0).toString(16); // "6f22"
-parseInt("漢".charCodeAt(0).toString(16),16) // 28450
+var a = "漢".charCodeAt(0); // 28450, 取得unicode, 10進位表示
+"漢".charCodeAt(0).toString(16); // "6f22", 取得unicode, 16進位表示
+parseInt("6f22",16) // 28450, 16進位轉10進位
+
 //0x6F22.toString(16); // "6f22"
-String.fromCharCode(parseInt(28450,10)); // 漢
-String.fromCharCode(parseInt("6f22",16)); // 漢
+
+
+String.fromCharCode(parseInt(28450,10)); // 漢, 10進位轉換
+String.fromCharCode(parseInt("6f22",16)); // 漢, 16進位轉換
 ```
