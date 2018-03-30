@@ -44,8 +44,17 @@ UTF-16: 以16bit (=2Byte)表示一個字
 
 [原理參照](https://zh.wikipedia.org/wiki/UTF-8)
 ```js
+// 0x6f22 is 3-bytes char.
+
+(0x6f22).toString(2); //0110 1111 0010 0010
+
+// 1110-0110 => 11100110
 parseInt(11100110,2).toString(16);//"e6"
+
+// 10-111100 => 10111100
 parseInt(10111100,2).toString(16);//"bc"
+
+// 10-100010 => 10100010
 parseInt(10100010,2).toString(16);//"a2"
 
 
