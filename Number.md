@@ -85,6 +85,6 @@ String.fromCharCode(parseInt("6f22",16)); // 漢, 16進位轉換
 
 ## NOTE
 
-原來是RFC 3629規定，有些編碼會因為過長(overlong)不允許出現
+原來是RFC 3629規定，utf-8有些編碼會因為過長(overlong)不允許出現
 
 - 參考[utf-8-validate@websockets](https://github.com/websockets/utf-8-validate/blob/master/fallback.js)
