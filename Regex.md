@@ -74,6 +74,12 @@ var fileName = "ex.gyt.js";
   !(pattern-list)   Matches anything except one of the given patterns
 ```
 
+例1: 找出檔案(但排除了`.jpg`, `.gif`)
+
+`
+$ls !(*.jpg|*.gif)
+`
+
 
 
 
