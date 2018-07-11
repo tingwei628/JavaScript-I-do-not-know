@@ -61,6 +61,21 @@ var fileName = "ex.gyt.js";
 ```
 
 
+### Summary
+
+> from: https://www.linuxjournal.com/content/bash-extended-globbing
+
+```
+
+  ?(pattern-list)   Matches zero or one occurrence of the given patterns
+  *(pattern-list)   Matches zero or more occurrences of the given patterns
+  +(pattern-list)   Matches one or more occurrences of the given patterns
+  @(pattern-list)   Matches one of the given patterns
+  !(pattern-list)   Matches anything except one of the given patterns
+```
+
+
+
 
 ### Reference
 
