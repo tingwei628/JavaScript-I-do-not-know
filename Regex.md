@@ -81,6 +81,15 @@ $ls !(*.jpg|*.gif)
 `
 
 
+例2:
+
++(2|3) 表示 滿足 `2一個以上 或 3一個以上`
+
+$ ls ab+(2|3).jpg
+`
+ 這些 ab2.jpg, ab3.jpg, ab2222.jpg, ab333.jpg 都符合
+
+
 
 
 ### Reference
