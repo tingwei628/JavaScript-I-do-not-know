@@ -28,7 +28,7 @@
  + [Number](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Number.md)
  
 
-## [TypeScript](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/TypeScript)
+### [TypeScript](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/TypeScript)
 
 ### Others
  + Event delegation
