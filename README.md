@@ -1,5 +1,6 @@
 # JavaScript I do not know!
-(From those tutorials, articles, videos, podcast, weekly...)
+> (From those tutorials, articles, videos, podcast, weekly...)
+
  + [Currying](https://github.com/tingwei628/blog/blob/master/JavaScript-currying.md)
  + [Middleware](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Middleware.md)
  + [Composable](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Composable.md)
@@ -26,6 +27,9 @@
  + [Async/Await](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/AsyncAwait.md)
  + [Number](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Number.md)
  
+
+## [TypeScript](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/TypeScript)
+
 ### Others
  + Event delegation
 
