@@ -111,4 +111,30 @@ namespace FF {
 //FF.FF1
 //FF.DD.DD2
 
+
+// define function with interface
+interface fn_interface {
+    (a: string, b: boolean): number;
+}
+var fn_implement: fn_interface = function (a: string, b: boolean) {
+    a = "a";
+    b = false;
+    return 0;
+};
+
+// interface extends interface, like interface A: C in C#
+interface B_I { 
+    bi();
+}
+interface C_I {
+    ci();
+}
+interface A_I extends B_I, C_I{
+    ai(); 
+}
+class A_C implements A_I {
+    ci() { }
+    bi() { }
+    ai() { }
+}
 ```
