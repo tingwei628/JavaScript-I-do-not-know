@@ -1,3 +1,31 @@
+## ES6 **class** 繼承
+
+```js
+class Base {
+  constructor() {
+
+  }
+  callBase() { return "callBase"; }
+}
+
+
+
+class Extend extends Base {
+  constructor() {
+     // super() 相當於 Base 的 constructor
+     super(); // <--- 如果要呼叫 Base 方法，一定要加 super()
+  }
+  callExtend() { return super.callBase(); // 呼叫 Base 方法 }
+}
+
+```
+
+
+
+
+
+
+
 ## [Prototype](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Object.md#prototype-特性)
 
 ## [Inheritance (繼承)](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Inheritance.md)
