@@ -45,3 +45,5 @@
 ### [JS Interview@AurelioDeRosa](https://github.com/tingwei628/JavaScript-I-do-not-know/wiki/JS-Interview)
 
 ### [JS cheatsheet@mbeaudru](https://github.com/mbeaudru/modern-js-cheatsheet)
+
+### [javascript-algorithms@trekhleb](https://github.com/trekhleb/javascript-algorithms)
