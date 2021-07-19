@@ -29,12 +29,7 @@
 
 ### Web Performance
 + [Web Perf](http://perf.rocks/)
-
-### JS Questions
- + [5-typical-javascript-interview-exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
  
 ### [JS Interview@AurelioDeRosa](https://github.com/tingwei628/JavaScript-I-do-not-know/wiki/JS-Interview)
-
-### [JS cheatsheet@mbeaudru](https://github.com/mbeaudru/modern-js-cheatsheet)
 
 ### [javascript-algorithms@trekhleb](https://github.com/trekhleb/javascript-algorithms)
