@@ -19,7 +19,6 @@
  + [Others](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Others)
  + [Set](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Set.md)
  + [Memory](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Memory.md)
- + [EventLoop](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/EventLoop.md)
  + [Polyfill-Shim](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/Polyfills-Shim.md)
  + [How_To_Test](https://github.com/tingwei628/JavaScript-I-do-not-know/tree/master/How_To_Test)
  + [Async/Await](https://github.com/tingwei628/JavaScript-I-do-not-know/blob/master/AsyncAwait.md)
